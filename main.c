@@ -3,16 +3,15 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
-	int i = 10 ;
-	char c = ' a ' ;
-
-	int * iptr;
-	iptr = & i;
-	char * cptr = & c;
-	int * iptr2 = iptr;
-	printf ( " i : % p \n % p (크기 : % i )\n " , iptr, & i, sizeof (iptr));
-	printf ( " c : % p \n % p (크기 : % i )\n " , cptr, & c, sizeof (cptr));
-	printf ( " iptr2 : % p , % i\n " , iptr2, * iptr2);
-	return 0;
+void swap (int x, int y) {
+	int temp;
+	temp=x;
+	x=y;
+	y=temp;
+}
+void main(void){
+	int a=3;
+	int b=5;
+	swap(a,b);
+	printf("a:%i, b:%i\n",a,b);
 }
